@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Members</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="jpg" href="https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Emblem_of_Telangana.svg/800px-Emblem_of_Telangana.svg.png">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.member {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.member h2 {
+    color: #0077b6;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus {
+    outline: none;
+    border-color: #0077b6;
+    box-shadow: 0 0 5px rgba(0, 123, 182, 0.5);
+}
+
+input[type="submit"] {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #005e8e;
+}
+button {
+            background-color: #0077b6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #005e8e;
+        }
+
+</style>
+<body>
+    <div class="container">
+        <h1>Add Members</h1>
+
+        <!-- Member 1 -->
+        <div class="member">
+            <h2>Member 1</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name1">Name:</label>
+                    <input type="text" id="name1" name="name1" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact1">Contact:</label>
+                    <input type="tel" id="contact1" name="contact1" required>
+                </div>
+                <div class="form-group">
+                    <label for="bloodGroup1">Blood Group:</label>
+                    <input type="text" id="bloodGroup1" name="bloodGroup1" required>
+                </div>
+                <div class="form-group">
+                    <label for="healthissues">Health Issues:</label>
+                    <input type="text" id="healthissues1" name="healthissues1" required placeholder="BP,Sugar,Ect...">
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="member">
+            <h2>Member 2</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name2">Name:</label>
+                    <input type="text" id="name2" name="name2" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact2">Contact:</label>
+                    <input type="tel" id="contact2" name="contact2" required>
+                </div>
+                <div class="form-group">
+                    <label for="bloodGroup2">Blood Group:</label>
+                    <input type="text" id="bloodGroup2" name="bloodGroup2" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="healthissues">Health Issues:</label>
+                    <input type="text" id="healthissues2" name="healthissues2" required placeholder="BP,Sugar,Ect...">
+                </div>
+            </form>
+
+        </div>
+        <div class="member">
+            <h2>Member 3</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name2">Name:</label>
+                    <input type="text" id="name2" name="name2" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact2">Contact:</label>
+                    <input type="tel" id="contact2" name="contact2" required>
+                </div>
+                <div class="form-group">
+                    <label for="bloodGroup2">Blood Group:</label>
+                    <input type="text" id="bloodGroup2" name="bloodGroup2" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="healthissues">Health Issues:</label>
+                    <input type="text" id="healthissues2" name="healthissues2" required placeholder="BP,Sugar,Ect..." >
+                </div>
+            </form>
+            
+        </div>
+
+
+    </div>
+    <button type="submit">Add more Members</button>
+    <div><button type="submit">Submit</button></div>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

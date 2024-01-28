@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code</title>
+    <link rel="icon" type="jpg" href="https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Emblem_of_Telangana.svg/800px-Emblem_of_Telangana.svg.png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #header {
+            background-color: #0c76af;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        #header p {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        #qr-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #qr-code {
+            width: 150px; 
+            height: 150px;
+        }
+
+        #scan-text {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        #download-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+        .footer {
+
+            background-color: #3a3a3a;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: rgb(0, 110, 255);
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Emblem_of_Telangana.svg/800px-Emblem_of_Telangana.svg.png" alt="Government of Telangana State Transport Department Logo">
+        <p>Government of Telangana State Transport Department</p>
+    </div> 
+    <div>
+        <h1>Road safety and Emergency </h1>
+    </div>
+    <div id="qr-container">
+        <img id="qr-code" src="qr.png" alt="QR Code">
+        <p id="scan-text">Scan this QR</p>
+        <p style="font-size: larger;">[ AND ]</p>
+    </div>
+    <div id="number-plate">
+        <img src="num-plate.jpeg" alt="number-plate" width="300" height="200">
+        <button id="download-button">Download Number Plate</button>
+
+    </div>
+
+    
+    <script>
+        const image = document.querySelector('#number-plate img');
+        const downloadButton = document.querySelector('#download-button');
+        image.addEventListener('click', () => {
+            downloadButton.style.display = 'block';
+        });
+        downloadButton.addEventListener('click', () => {
+ 
+            const link = document.createElement('a');
+            link.href = image.src;
+            link.download = 'number-plate.jpeg';
+            document.body.appendChild(link);
+            link.click();
+
+            document.body.removeChild(link);
+        });
+    </script>
+    
+</body>
+</html>
